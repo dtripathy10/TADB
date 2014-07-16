@@ -55,26 +55,26 @@ WSGI_APPLICATION = 'TADB.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'mtad',                      
-#        'USER': 'postgres',
-#        'PASSWORD': 'postgres',
-#        'HOST': 'localhost'
-#    }
-#}
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'TADB',
-        'USER': 'root',
-        'PASSWORD': 'qweasz',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '7834',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'mtad',                      
+       'USER': 'postgres',
+       'PASSWORD': 'postgres',
+       'HOST': 'localhost'
+   }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'TADB',
+#         'USER': 'root',
+#         'PASSWORD': 'qweasz',
+#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#         'PORT': '7834',
+#     }
+# }
 ###################################################################################
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

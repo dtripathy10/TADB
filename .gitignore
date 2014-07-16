@@ -1,0 +1,18 @@
+.DS_Store
+
+# Python
+build/
+dist/
+~*
+*.egg-info
+*.pyc
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+dotfiler.org
+
+# dotfiler byte-code
+dotfilerc
