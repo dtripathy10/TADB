@@ -57,7 +57,7 @@
             alert ("Your browser does not support XMLHTTP!");
           return; 
         }
-          var url="getsource.php"; 
+          var url="/accident"; 
           xmlhttp.onreadystatechange=getsDataResponse;
           xmlhttp.open("GET",url,true); 
           xmlhttp.send(null); 
@@ -92,8 +92,15 @@
           var jsonData = JSON.parse(xmlhttp.responseText);
           for (var data in jsonData) 
           {
-            var latitude = jsonData[data]["Latitude"];
-            var longitude = jsonData[data]["Longitude"];
+            var latitude = jsonData[data]["latitude"];
+
+            var longitude = jsonData[data]["longitude"];
+
+            if(isNaN(latitude) || isNaN(longitude)) {
+              console.log(latitude + "\t" + longitude);
+              continue;
+            }
+
             var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+

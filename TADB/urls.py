@@ -4,12 +4,21 @@ from django.contrib import admin
 admin.autodiscover()
 
 from TADB import settings
+
+from map.views import accident_data
+
 from django.views.generic import TemplateView
+
 
 urlpatterns = patterns('',
     
     url(r'^admin/', include(admin.site.urls)),
 
+    # Include API URLs
+    url( r'^api/', include( 'api.urls' ) ),
+
+    ##Testing
+    url(r'^accident/$', accident_data, name='home'),
 
     ##Template
     url(r'^$', TemplateView.as_view(template_name='home.html')),

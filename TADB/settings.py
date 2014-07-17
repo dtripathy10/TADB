@@ -36,6 +36,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles', ##static file
+
+    # Django Rest Framework
+    'rest_framework',
+
+    # `task` and `api` applications
+    'map',
+    'api'
 )
 
 MIDDLEWARE_CLASSES = (
