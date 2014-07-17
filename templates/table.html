@@ -32,7 +32,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="getsData()">
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -92,15 +92,23 @@
 
 
 
-      <table class="table table-hover" id="xyz">
+      <table class="table table-striped" id="xyz">
       <thead>
-        <tr class="success">
-          <th><button type='button' class='btn btn-success' data-toggle='modal' data-target='#myModal'>#</button></th>
-          <th><button type='button' class='btn btn-success' >keyword</button></th>
-          <th><button type='button' class='btn btn-success' >meaning</button></th>
-          <th><button type='button' class='btn btn-success' >root</button></th>
-          <th><button type='button' class='btn btn-success' >Example</button></th>
-          <th><button type='button' class='btn btn-success'>Done</button></th>
+        <tr>
+          <th>id</th>
+          <th>date_of_accident</th>
+          <th>police_station</th>
+          <th>source_vehicle_type</th>
+          <th>destination_vehicle_type</th>
+          <th>gender_age</th>
+          <th>act</th>
+          <th>fatal_number</th>
+          <th>destination_plate_no</th>
+          <th>longitude</th>
+          <th>location</th>
+          <th>time_of_accident</th>
+          <th>latitude</th>
+          <th>source_plate_no</th>
         </tr>
       </thead>
       <tbody>
@@ -120,11 +128,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript" ></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="/{{STATIC_URL}}bootstrap/workshop.js"></script>
-     <script src="/{{STATIC_URL}}bootstrap/map.js"></script>
+    <script src="/{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" language="javascript" src="/{{STATIC_URL}}js/datatable/jquery.dataTables.min.js"></script>
     <script type="text/javascript" language="javascript" src="/{{STATIC_URL}}js/datatable/jquery-DT-pagination.js"></script>
